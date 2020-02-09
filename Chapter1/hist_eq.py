@@ -4,7 +4,7 @@ import imtool as imtools
 import matplotlib.pyplot as plt
 
 im = array(Image.open('../data/AquaTermi_lowcontrast.JPG').convert('L'))
-im2, cdf = imtools.histeq(im)
+im2, cdf = imtools.histeq(im, nbr_bins=256)
 
 plt.figure(figsize=(15,15))
 plt.gray()
